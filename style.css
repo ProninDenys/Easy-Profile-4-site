@@ -1,0 +1,303 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #545454;
+}
+
+.container {
+    display: flex;
+    gap: 30px; 
+    align-items: stretch;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+.form-container h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #0a0505;
+    
+
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-input {
+    position: relative;
+    display: inline-block;
+    width: 138px; 
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: right; 
+    padding-right: 10px;
+    background-color: #ffffff;
+}
+
+.file-input input[type="file"] {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.file-input img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px; 
+    padding: 0;
+}
+
+.delete-btn img {
+    width: 31px;
+    height: 31px;
+    margin-top: -18px;
+    margin-right: 20px;
+
+}
+
+.delete-btn:focus, .delete-btn:active, .delete-btn:hover {
+    outline: none;
+    background-color: transparent; 
+}
+
+.delete-btn img:focus, .delete-btn img:active, .delete-btn img:hover {
+    outline: none; 
+    background-color: transparent; 
+}
+
+
+.profile-note {
+    font-size: 13px;
+    color: #666;
+    opacity: 0.7;
+    margin-left: 90px; 
+    text-align: left; 
+    margin-top: -20px;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.20000000298023224px;
+    text-align: left;
+}
+
+.form-group {
+    flex: 1;
+    font-weight: 200;
+}
+
+.gender {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 10px;
+    align-items: center; 
+}
+
+.gender input {
+    margin-right: 5px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E4E4E4;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+.gender input:checked {
+    background-color: #007bff; 
+    border-color: #007bff; 
+}
+
+.gender input:checked::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 3px #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.email-note {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+    text-align: left;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    color: #969696;
+}
+
+.terms, .login {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.terms a, .login a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.terms a:hover, .login a:hover {
+    text-decoration: underline;
+}
+
+.update-btn {
+    width: 150px;
+    height: 38px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+}
+
+.divider {
+    width: 408px;
+    height: 1px;
+    background-color: #E4E4E4;
+    margin: 20px auto; 
+}
+
+.login {
+    margin-top: 10px;
+}
+
+select option[value=""][disabled] {
+    color: #cfcece; 
+    font-weight: normal; 
+}
+
+
+select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12"><polygon points="5,0 0,5 10,5" fill="grey"/><polygon points="5,12 0,7 10,7" fill="grey"/></svg>') no-repeat right 10px center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-right: 30px; 
+}

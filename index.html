@@ -1,11 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form register CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="form-container">
+            <h1>Create an Account</h1>
+            <form action="#" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" required>
+                    </div>
+                </div>
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+                <p class="email-note">We'll never share your email with anyone else.</p>
+
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="terms narrow-text">
+                By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+            </p>
+            <div class="divider"></div>
+            <p class="login narrow-text">
+                Have an account? <a href="#">Log In</a>
+            </p>
+        </div>
+        <div class="form-container">
+            <h1>Profile</h1>
+            <form action="#" method="POST">
+                <div class="profile-section">
+                    <div class="profile-pic">
+                        <img src="img/Image.svg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-actions">
+                        <div class="file-input">
+                            <input type="file" accept="image/*">
+                            <img src="img/Photo Camera.svg" alt="Upload">
+                        </div>
+                        <button type="button" class="delete-btn">
+                            <img src="img/Text + Right Icon.svg" alt="Delete">
+                        </button>
+                    </div>
+                </div>
+                <p class="profile-note">Up to 1 MB (300x300 px)</p>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" id="zip-code" name="zip_code" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="tel" id="phone-number" name="phone_number" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="update-btn">Update</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
