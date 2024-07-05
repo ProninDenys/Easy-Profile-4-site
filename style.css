@@ -1,12 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    color: #545454;
 }
 
 .container {
@@ -26,9 +26,13 @@ body {
     justify-content: flex-start; 
 }
 
-.form-container h2 {
+.form-container h1 {
     margin-bottom: 20px;
     font-weight: 700;
+    font-size: 24px;
+    color: #0a0505;
+    
+
 }
 
 .profile-section {
@@ -39,8 +43,8 @@ body {
 }
 
 .profile-pic {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     overflow: hidden;
     background-color: #ccc;
@@ -55,7 +59,7 @@ body {
 .profile-actions {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .file-input {
@@ -67,8 +71,9 @@ body {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; 
+    justify-content: right; 
     padding-right: 10px;
+    background-color: #ffffff;
 }
 
 .file-input input[type="file"] {
@@ -88,32 +93,45 @@ body {
 }
 
 .delete-btn {
-    background-color: transparent;
+    background-color: transparent; 
     border: none;
     cursor: pointer;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
     height: 30px;
-    border: 16px solid #a4a3a3;
-    
+    margin-left: 10px; 
+    padding: 0;
 }
 
 .delete-btn img {
-    width: 33px; 
-    height: 33px;
-    
+    width: 31px;
+    height: 31px;
+    margin-top: -18px;
+    margin-right: 20px;
+
 }
+
+.delete-btn:focus, .delete-btn:active, .delete-btn:hover {
+    outline: none;
+    background-color: transparent; 
+}
+
+.delete-btn img:focus, .delete-btn img:active, .delete-btn img:hover {
+    outline: none; 
+    background-color: transparent; 
+}
+
 
 .profile-note {
     font-size: 13px;
     color: #666;
     opacity: 0.7;
-    margin: 5px 0 0 61px; 
+    margin-left: 90px; 
     text-align: left; 
-    margin-top: -10px;
+    margin-top: -20px;
+    
 }
 
 label {
@@ -168,6 +186,33 @@ select:focus {
 
 .gender input {
     margin-right: 5px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E4E4E4;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+}
+
+.gender input:checked {
+    background-color: #007bff; 
+    border-color: #007bff; 
+}
+
+.gender input:checked::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 3px #007bff;
 }
 
 button {
@@ -180,6 +225,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -195,7 +241,7 @@ button:hover {
     text-align: left;
     margin-top: 3px;
     margin-bottom: 10px;
-    color: #666;
+    color: #969696;
 }
 
 .terms, .login {
@@ -205,7 +251,7 @@ button:hover {
 }
 
 .terms a, .login a {
-    color: #007bff;
+    color: #007BFF;
     text-decoration: none;
 }
 
@@ -228,4 +274,30 @@ button:hover {
 
 .update-btn:hover {
     background-color: #0056b3;
+}
+
+.divider {
+    width: 408px;
+    height: 1px;
+    background-color: #E4E4E4;
+    margin: 20px auto; 
+}
+
+.login {
+    margin-top: 10px;
+}
+
+select option[value=""][disabled] {
+    color: #cfcece; 
+    font-weight: normal; 
+}
+
+
+select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12"><polygon points="5,0 0,5 10,5" fill="grey"/><polygon points="5,12 0,7 10,7" fill="grey"/></svg>') no-repeat right 10px center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-right: 30px; 
 }
