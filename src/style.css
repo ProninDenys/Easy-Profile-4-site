@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #f8f9fa;
@@ -7,12 +8,14 @@ body {
     height: 100vh;
     margin: 0;
     color: #545454;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .container {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
     align-items: stretch;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .form-container {
@@ -23,7 +26,8 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .form-container h1 {
@@ -31,6 +35,7 @@ body {
     font-weight: 700;
     font-size: 24px;
     color: #0a0505;
+    transition: color 0.5s ease;
 }
 
 .profile-section {
@@ -63,13 +68,13 @@ body {
 .file-input {
     position: relative;
     display: inline-block;
-    width: 138px; 
+    width: 138px;
     height: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: right; 
+    justify-content: right;
     padding-right: 10px;
     background-color: #ffffff;
 }
@@ -91,7 +96,7 @@ body {
 }
 
 .delete-btn {
-    background-color: transparent; 
+    background-color: transparent;
     border: none;
     cursor: pointer;
     display: flex;
@@ -99,7 +104,7 @@ body {
     justify-content: center;
     width: 30px;
     height: 30px;
-    margin-left: 10px; 
+    margin-left: 10px;
     padding: 0;
 }
 
@@ -112,20 +117,15 @@ body {
 
 .delete-btn:focus, .delete-btn:active, .delete-btn:hover {
     outline: none;
-    background-color: transparent; 
-}
-
-.delete-btn img:focus, .delete-btn img:active, .delete-btn img:hover {
-    outline: none; 
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 .profile-note {
     font-size: 13px;
     color: #666;
     opacity: 0.7;
-    margin-left: 90px; 
-    text-align: left; 
+    margin-left: 90px;
+    text-align: left;
     margin-top: -20px;
 }
 
@@ -146,7 +146,7 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    transition: border-color 0.3s;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 input[type="text"]:focus,
@@ -169,14 +169,13 @@ select:focus {
 
 .form-group {
     flex: 1;
-    font-weight: 200;
 }
 
 .gender {
     display: flex;
     gap: 4px;
     margin-bottom: 10px;
-    align-items: center; 
+    align-items: center;
 }
 
 .gender input {
@@ -193,8 +192,8 @@ select:focus {
 }
 
 .gender input:checked {
-    background-color: #007bff; 
-    border-color: #007bff; 
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
 .gender input:checked::before {
@@ -227,22 +226,10 @@ button:hover {
     background-color: #0056b3;
 }
 
-.email-note {
-    font-family: 'Roboto', sans-serif;
+.email-note, .terms, .login {
     font-size: 13px;
-    font-weight: 100;
-    line-height: 18px;
-    letter-spacing: -0.1px;
-    text-align: left;
-    margin-top: 3px;
-    margin-bottom: 10px;
-    color: #969696;
-}
-
-.terms, .login {
-    text-align: center;
-    font-size: 12px;
     color: #666;
+    transition: color 0.5s ease;
 }
 
 .terms a, .login a {
@@ -275,46 +262,14 @@ button:hover {
     width: 408px;
     height: 1px;
     background-color: #E4E4E4;
-    margin: 20px auto; 
+    margin: 20px auto;
 }
 
 .login {
     margin-top: 10px;
 }
 
-select option[value=""][disabled] {
-    color: #cfcece; 
-    font-weight: normal; 
-}
-
-select {
-    appearance: none;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12"><polygon points="5,0 0,5 10,5" fill="grey"/><polygon points="5,12 0,7 10,7" fill="grey"/></svg>') no-repeat right 10px center;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding-right: 30px; 
-}
-
-/* Плавный переход для всех элементов */
-body {
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.form-container {
-    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
-}
-
-input, select, .email-note, .profile-note, .form-title {
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* Темная и светлая тема */
-body.light {
-    background-color: #f8f9fa;
-    color: #545454;
-}
-
+/* Темная тема */
 body.dark {
     background-color: #2c2c2c;
     color: #e0e0e0;
@@ -325,15 +280,15 @@ body.dark .form-container {
     color: #e0e0e0;
 }
 
-body.dark .form-title {
-    color: #fff;
-}
-
-body.dark input, 
+body.dark input,
 body.dark select {
     background-color: #444;
     color: #fff;
     border: 1px solid #555;
+}
+
+body.dark .form-title, body.dark .terms, body.dark .login {
+    color: #fff;
 }
 
 /* Стили для переключателя темы */
@@ -400,8 +355,26 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
-/* Уменьшение эффекта наведения */
-.theme-toggle-button {
-    outline: none;
-    box-shadow: none;
+
+body.dark {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+body.dark .form-container,
+body.dark .profile-note,
+body.dark .email-note,
+body.dark .terms,
+body.dark .login,
+body.dark label,
+body.dark h1,
+body.dark p {
+    color: #ffffff;
+}
+
+body.dark input,
+body.dark select {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
 }
