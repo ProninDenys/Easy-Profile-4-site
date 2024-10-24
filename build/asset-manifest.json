@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Easy-Profile-4-site/static/css/main.15b5b9b5.css",
+    "main.js": "/Easy-Profile-4-site/static/js/main.ca819f82.js",
+    "static/js/453.e892cd30.chunk.js": "/Easy-Profile-4-site/static/js/453.e892cd30.chunk.js",
+    "index.html": "/Easy-Profile-4-site/index.html",
+    "main.15b5b9b5.css.map": "/Easy-Profile-4-site/static/css/main.15b5b9b5.css.map",
+    "main.ca819f82.js.map": "/Easy-Profile-4-site/static/js/main.ca819f82.js.map",
+    "453.e892cd30.chunk.js.map": "/Easy-Profile-4-site/static/js/453.e892cd30.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15b5b9b5.css",
+    "static/js/main.ca819f82.js"
+  ]
+}
