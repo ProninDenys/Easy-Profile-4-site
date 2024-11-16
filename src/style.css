@@ -1,14 +1,17 @@
-/* Общие стили */
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #f8f9fa;
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; 
     margin: 0;
+    padding: 100px; 
     color: #545454;
     transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden; 
 }
 
 .container {
@@ -19,15 +22,15 @@ body {
 }
 
 .form-container {
-    background-color: #fff;
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 600px; 
+    width: 90%; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    overflow: visible; 
+    margin: 0 auto;
 }
 
 .form-container h1 {
@@ -105,7 +108,8 @@ body {
     width: 30px;
     height: 30px;
     margin-left: 10px;
-    padding: 0;
+    padding: 8px;
+   
 }
 
 .delete-btn img {
@@ -259,7 +263,7 @@ button:hover {
 }
 
 .divider {
-    width: 408px;
+    width: 308px;
     height: 1px;
     background-color: #E4E4E4;
     margin: 20px auto;
@@ -269,7 +273,7 @@ button:hover {
     margin-top: 10px;
 }
 
-/* Темная тема */
+/* DARK */
 body.dark {
     background-color: #2c2c2c;
     color: #e0e0e0;
@@ -291,7 +295,7 @@ body.dark .form-title, body.dark .terms, body.dark .login {
     color: #fff;
 }
 
-/* Стили для переключателя темы */
+
 .theme-toggle-wrapper {
     position: fixed;
     top: 20px;
@@ -377,4 +381,82 @@ body.dark select {
     background-color: #444;
     color: #fff;
     border: 1px solid #555;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        gap: 20px; 
+        align-items: center; 
+        padding: 10px;
+        overflow-x: hidden; 
+    }
+
+    .form-container {
+        width: 80%; 
+        max-width: 100%;
+        padding: 15px; 
+    }
+
+    .form-container h1 {
+        font-size: 18px; 
+        text-align: center; 
+    }
+
+    .form-row {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .form-group {
+        width: 100%; 
+    }
+
+    button {
+        width: 100%; 
+        margin-top: 10px;
+    }
+
+    .theme-toggle-wrapper {
+        top: 10px;
+        right: 10px;
+    }
+
+    .email-note,
+    .terms,
+    .login {
+        font-size: 12px; 
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+ 
+    .container {
+        padding: 5px;
+        gap: 15px;
+    }
+
+    .form-container {
+        width: 80%;
+        padding: 10px; 
+    }
+
+    .form-container h1 {
+        font-size: 16px; 
+    }
+
+    .form-row {
+        gap: 8px;
+    }
+
+    .email-note,
+    .terms,
+    .login {
+        font-size: 10px; 
+    }
+
+    button {
+        padding: 8px;
+    }
 }
